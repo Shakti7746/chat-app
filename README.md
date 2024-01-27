@@ -77,6 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 To start this project you need to install the following things
 
-1.  SASS for css
-2. FIREBASE for authentication
-3. react-roter dom
+1. SASS for css                   // npm install sass
+2. FIREBASE for authentication     // npm install firebase
+3. react-roter-dom                 //npm intall react-router-dom
