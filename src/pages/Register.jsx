@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import imgavtr from '../img/imgAvtar.png'
-import { createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
-import { auth, storage } from "../firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, storage, db } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-  const [err, setErr] = useState(false)
+  const [err, setErr] = useState(false);
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,22 +26,32 @@ const Register = () => {
 
       const uploadTask = uploadBytesResumable(storageRef, file);
 
-      uploadTask.on('state_changed',
-
+      uploadTask.on(
         (error) => {
           setErr(true)
         },
         () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
-            await updateProfile(res.user,{
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
               displayName,
-              photoURL:downloadURL,
+              photoURL: downloadURL,
             });
+            await setDoc(doc(db, "users", res.user.uid), {
+              displayName,
+              email,
+              photoURL: downloadURL
+            });
+            await setDoc(doc(db,"userChats", res.user.uid),{});
+            navigate("/");
+
+
           });
         }
-      );
+        );
+        
+
     } catch (err) {
-      setErr(true)
+      setErr(true);
     }
 
 
