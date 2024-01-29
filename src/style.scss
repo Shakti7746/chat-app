@@ -117,6 +117,10 @@
             background-color: #32e8c1;
             position: relative;
 
+            @media screen and (max-width: 480px) {
+                display: none;;
+            }
+
             .navbar {
                 display: flex;
                 align-items: center;
