@@ -22,14 +22,13 @@ const Login = () => {
   return (
     <div className='formContainer'>
       <div className='formWrapper'>
-        <span className="logo">Chat App</span>
+        <span className="logo">Hola Chat</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder='email' />
           <input type="password" placeholder='password' />
           <button>Sign In</button>
           {err && <span>Something went wrong</span>}
-
         </form>
         <p>You don't have an acount? <Link to='/register'>Register</Link></p>
       </div>
@@ -37,4 +36,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;
