@@ -5,6 +5,7 @@ import './style.scss';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { AuthContext } from './components/context/AuthContext';
+import About from './components/About';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             </ProtectedRoute>} />
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
+          <Route path='about' element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

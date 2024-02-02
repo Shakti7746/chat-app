@@ -78,6 +78,7 @@ const Register = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>You have an acount?<Link to='/login'>Login</Link></p>
+        <Link to='/about'>ABOUT US</Link>
       </div>
     </div>
   );
