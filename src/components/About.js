@@ -3,7 +3,7 @@ import './about.scss';
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="aboutcontainer">
       <div className="about">
         <p>
           This is a chatting app where user can register using username, email Id and password and can upload an avtar as well.
