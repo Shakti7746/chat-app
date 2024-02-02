@@ -8,7 +8,7 @@ const About = () => {
         <p>
           This is a chatting app where user can register using username, email Id and password and can upload an avtar as well.
           after registering it will automatically redirect to home page of the application where you can search users by there names
-          if they are registered users and chat with them in real time.
+          if they are registered users you can chat with them in real time.
           if you are already a registered user you can login to the application using your registered email id and password.
         </p>
       </div>
