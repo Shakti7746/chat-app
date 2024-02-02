@@ -23,6 +23,7 @@
     justify-content: center;
 
     .formWrapper {
+        box-shadow: 15px 15px 10px #b1afaf;
         background-color: white;
         padding: 20px 60px;
         border-radius: 10px;
@@ -91,16 +92,17 @@
             margin-top: 10px;
         }
     }
-}
+}   
 
 .home {
-    background-color: #6b6ba8;
+    background-color: #b7b7be;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .container {
+        box-shadow: 20px 20px 30px rgb(184, 173, 173);
         border: 1px solid white;
         border-radius: 10px;
         width: 65%;
@@ -114,7 +116,7 @@
 
         .sidebar {
             flex: 1;
-            background-color: #32e8c1;
+            background-color: #a9cbd0;
             position: relative;
 
             @media screen and (max-width: 480px) {
@@ -125,7 +127,7 @@
                 display: flex;
                 align-items: center;
                 background-color: #4d4dad;
-                height: 50px;
+                height: 31px;
                 padding: 10px;
                 justify-content: space-between;
                 color: white;
@@ -167,6 +169,7 @@
 
             .search {
                 border-bottom: 1px solid grey;
+                border-radius: 10px;
 
                 .searchForm {
                     padding: 10px;
@@ -257,6 +260,7 @@
             gap: 10px;
 
             img {
+                mix-blend-mode: darken;
                 height: 24px;
                 cursor: pointer;
             }
